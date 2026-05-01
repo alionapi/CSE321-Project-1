@@ -99,11 +99,7 @@ You can pipe the output to a file for the report:
 
 ## Reproducing the experiments
 
-1. **Place the TA-provided CSV at `data/student.csv`.**
-   If you don't have it yet, generate a synthetic 100k-row file:
-   ```bash
-   ./gen_data data/student.csv 100000
-   ```
+1. **Place the CSV at the root.**
    (Synthetic IDs are 9 digits in the form `2020xxxxx … 2026xxxxx`; the
    experiment driver auto-derives the range-query bounds from the dataset
    so the same code works for both 8- and 9-digit IDs.)

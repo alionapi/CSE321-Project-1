@@ -8,7 +8,7 @@ Implementation and Analysis of B-tree Index Structures
 ├── CMakeLists.txt
 ├── README.md
 ├── data/
-│   └── students.csv          # 100,000 records (provided by the TA, or
+│   └── student.csv          # 100,000 records (provided by the TA, or
 │                               generated locally with `gen_data`)
 └── src/
     ├── common.h              # Record + RID definitions
@@ -38,8 +38,8 @@ g++ -std=c++17 -O2 -o gen_data src/gen_data.cpp        # only if you need synthe
 3. The CMake file defines three targets: `btree_project`, `test_correctness`,
    and `gen_data`. Pick `btree_project` from the run-configuration dropdown.
 4. **Run → Edit Configurations…** — set the working directory to the project
-   root (so the relative path `data/students.csv` resolves) and add
-   `data/students.csv` as a program argument (or the path to the TA-provided
+   root (so the relative path `data/student.csv` resolves) and add
+   `data/student.csv` as a program argument (or the path to the TA-provided
    CSV).
 5. Hit **Run** ▶ (or **⇧F10**).
 
@@ -71,7 +71,7 @@ StudentID,Name,Gender,GPA,Height,Weight
 Each experiment prints a banner and a small results table. Sample run:
 
 ```
-Loading CSV from: data/students.csv
+Loading CSV from: data/student.csv
 Loaded 100000 records.
 
 =========================================================
@@ -95,15 +95,15 @@ B+      total=2.41 ms,  mean=0.0002 ms/op,  hits=10000/10000
 
 You can pipe the output to a file for the report:
 ```bash
-./btree_project data/students.csv | tee results.txt
+./btree_project data/student.csv | tee results.txt
 ```
 
 ## Reproducing the experiments
 
-1. **Place the TA-provided CSV at `data/students.csv`.**
+1. **Place the TA-provided CSV at `data/student.csv`.**
    If you don't have it yet, generate a synthetic 100k-row file:
    ```bash
-   ./gen_data data/students.csv 100000
+   ./gen_data data/student.csv 100000
    ```
    (Synthetic IDs are 9 digits in the form `2020xxxxx … 2026xxxxx`; the
    experiment driver auto-derives the range-query bounds from the dataset
@@ -118,7 +118,7 @@ You can pipe the output to a file for the report:
 
 3. **Run the full experiment**:
    ```bash
-   ./btree_project data/students.csv
+   ./btree_project data/student.csv
    ```
    Total runtime is a few seconds on a recent laptop. The driver covers all
    four mandatory workloads from §3.1 of the spec:

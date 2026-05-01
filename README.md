@@ -93,7 +93,7 @@ B+      total=2.41 ms,  mean=0.0002 ms/op,  hits=10000/10000
 
 You can pipe the output to a file for the report:
 ```bash
-./btree_project data/student.csv | tee results.txt
+./btree_project student.csv | tee results.txt
 ```
 
 ## Reproducing the experiments
@@ -112,7 +112,7 @@ You can pipe the output to a file for the report:
 
 3. **Run the full experiment**:
    ```bash
-   ./btree_project data/student.csv
+   ./btree_project student.csv
    ```
    Total runtime is a few seconds on a recent laptop. The driver covers all
    four mandatory workloads from §3.1 of the spec:

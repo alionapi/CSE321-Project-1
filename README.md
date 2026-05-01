@@ -1,5 +1,4 @@
-# CSE321-Project-1
-## B-tree, B*-tree, B+-tree
+# CSE321-Project-1 (B-tree, B*-tree, B+-tree)
 Implementation and Analysis of B-tree Index Structures
 
 ## Project layout

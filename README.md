@@ -7,9 +7,8 @@ Implementation and Analysis of B-tree Index Structures
 .
 ├── CMakeLists.txt
 ├── README.md
-├── data/
-│   └── student.csv          # 100,000 records (provided by the TA, or
-│                               generated locally with `gen_data`)
+├── student.csv                 # 100,000 records (provided by instructor)
+│                               
 └── src/
     ├── common.h              # Record + RID definitions
     ├── csv_loader.h          # CSV reader (auto-detects header row)

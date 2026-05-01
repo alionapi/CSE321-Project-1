@@ -37,8 +37,8 @@ g++ -std=c++17 -O2 -o gen_data src/gen_data.cpp        # only if you need synthe
 3. The CMake file defines three targets: `btree_project`, `test_correctness`,
    and `gen_data`. Pick `btree_project` from the run-configuration dropdown.
 4. **Run → Edit Configurations…** — set the working directory to the project
-   root (so the relative path `data/student.csv` resolves) and add
-   `data/student.csv` as a program argument (or the path to the TA-provided
+   root (so the relative path `student.csv` resolves) and add
+   `student.csv` as a program argument (or the path to the TA-provided
    CSV).
 5. Hit **Run** ▶ (or **⇧F10**).
 
@@ -50,7 +50,7 @@ g++ -std=c++17 -O2 -o gen_data src/gen_data.cpp        # only if you need synthe
 
 ## Input format
 
-`data/student.csv` — one student per line, comma-separated:
+`student.csv` — one student per line, comma-separated:
 
 ```
 StudentID,Name,Gender,GPA,Height,Weight
@@ -70,7 +70,7 @@ StudentID,Name,Gender,GPA,Height,Weight
 Each experiment prints a banner and a small results table. Sample run:
 
 ```
-Loading CSV from: data/student.csv
+Loading CSV from: student.csv
 Loaded 100000 records.
 
 =========================================================

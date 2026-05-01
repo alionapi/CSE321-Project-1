@@ -50,7 +50,7 @@ g++ -std=c++17 -O2 -o gen_data src/gen_data.cpp        # only if you need synthe
 
 ## Input format
 
-`data/students.csv` — one student per line, comma-separated:
+`data/student.csv` — one student per line, comma-separated:
 
 ```
 StudentID,Name,Gender,GPA,Height,Weight
